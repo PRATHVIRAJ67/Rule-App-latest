@@ -1,0 +1,2 @@
+.env
+MONGODB_URI=mongodb+srv://prathviholla67:jPJPWDVPqJDNddSE@cluster0.f3vid.mongodb.net/rule_engine_db?retryWrites=true&w=majority&appName=Cluster0

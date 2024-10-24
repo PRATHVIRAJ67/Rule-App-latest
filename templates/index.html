@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Rule Engine</h1>
+
+    <h2>Create Rule</h2>
+    <form id="ruleForm">
+        <input type="text" id="ruleInput" placeholder="Enter rule string" required>
+        <button type="submit">Create Rule</button>
+    </form>
+
+    <h2>Combine Rules</h2>
+    <form id="combineForm">
+        <textarea id="combineRulesInput" placeholder="Enter rule strings (one per line)" rows="5" required></textarea>
+        <button type="submit">Combine Rules</button>
+    </form>
+
+    <h2>Evaluate Rule</h2>
+    <form id="evalForm">
+        <textarea id="jsonData" placeholder="Enter user data JSON" rows="5" required></textarea>
+        <button type="submit">Evaluate Rule</button>
+    </form>
+
+    <h2>Result</h2>
+    <pre id="result">Awaiting action...</pre>
+
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
