@@ -1,6 +1,6 @@
 let lastAST = null;        
 let combinedAST = null;   
-let BASE="https://zeotap-assignment-rule-app-latest.vercel.app"
+let BASE_url="https://zeotap-assignment-rule-app-latest.vercel.app"
 
 function displayResult(message) {
     document.getElementById("result").textContent = message;
@@ -21,7 +21,7 @@ document.getElementById("ruleForm").addEventListener("submit", async function (e
     }
 
     try {
-        const response = await fetch(`${BASE}/create_rule`, {
+        const response = await fetch(`${BASE_url}/create_rule`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ rule_string: ruleString })
@@ -60,7 +60,7 @@ document.getElementById("combineForm").addEventListener("submit", async function
     }
 
     try {
-        const response = await fetch(`${BASE}/combine_rules`, {
+        const response = await fetch(`${BASE_url}/combine_rules`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ rule_strings: ruleStrings })
@@ -108,7 +108,7 @@ document.getElementById("evalForm").addEventListener("submit", async function (e
     }
 
     try {
-        const response = await fetch(`${BASE}/evaluate_rule`, {
+        const response = await fetch(`${BASE_url}/evaluate_rule`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
